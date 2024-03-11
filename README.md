@@ -1,4 +1,4 @@
-ntern Front-End Development Test: Electrical Machines Parameter Viewer
+Intern Front-End Development Test: Electrical Machines Parameter Viewer
 
 Project Overview:
 
