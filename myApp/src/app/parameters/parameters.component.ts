@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ElectricalMachineParameter } from '../shared/electrical-machine-parameter';
+import { ParameterService } from '../shared/parameter.service';
 
 @Component({
-  selector: 'app-parameters',
-  standalone: true,
-  imports: [],
+  selector: 'app-parameters', // Adjust selector if needed
   templateUrl: './parameters.component.html',
-  styleUrl: './parameters.component.css'
+  styleUrls: ['./parameters.component.css']
 })
-export class ParametersComponent {
+export class ParametersComponent implements OnInit {
+  parameters: ElectricalMachineParameter[] = [];
 
+  constructor(private parameterService: ParameterService) {}
+
+  ngOnInit(): void {
+    this.parameterService.fetchParameters()
+      .subscribe(parameters => this.parameters = parameters);
+  }
 }
