@@ -1,0 +1,9 @@
+<p>display-data works!</p>
+<div class="category-container">
+    <h2 class="display-title">Exciting Categories</h2>
+    <div class="category-list">
+      <span class="category" *ngFor="let category of categories">
+        {{ formatCategory(category) }} 
+      </span>
+    </div>
+  </div>

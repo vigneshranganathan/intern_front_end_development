@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-
+import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-
+  constructor(private router: Router) {} 
+  navigateHome() {
+    this.router.navigateByUrl('/'); // Navigate to the home route
+  }
+  navigateDisplayData() {
+    this.router.navigateByUrl('/display-data'); 
+  }
 }
