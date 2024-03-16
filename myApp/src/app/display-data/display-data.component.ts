@@ -2,14 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-display-data', 
+  selector: 'app-display-data',
+  standalone: true, 
+  imports: [CommonModule],
   templateUrl: './display-data.component.html',
-  styleUrls: ['./display-data.component.css'],
+  styleUrls: ['./display-data.component.css']
  } )
-export class DisplayDataComponent implements OnInit {
+export class DisplayDataComponent {
   categories: string[] = [];
+  errorMessage: string | null = null
 
   constructor(private http: HttpClient) {}
 
@@ -21,6 +25,7 @@ export class DisplayDataComponent implements OnInit {
     this.http.get<string[]>('https://dummyjson.com/products/categories')
       .pipe(
         catchError(error => {
+          this.errorMessage = 'Error fetching categories.'; 
           console.error('Error fetching categories:', error);
           return of([]); // Handle errors gracefully
         })
