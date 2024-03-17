@@ -1,0 +1,6 @@
+<p>data-display works!</p>
+<button (click)="fetchData()">Fetch Data</button>
+
+<div *ngIf="data">
+  <pre>{{ data | json }}</pre>
+</div>
