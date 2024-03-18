@@ -19,14 +19,16 @@ Requirements:
 2. API Integration:
 
 * Utilize an API built with Django and MySQL to retrieve data related to electrical machines parameters.
-* Implement API calls to fetch parameter data and display it in the Angular application.
+* Implement API calls to fetch parameter data and display it in the Angular application. - Done
+![alt text](image.png)
 
-
-3. Database Design:
+3. Database Design: - Done
+![alt text](image-2.png)
 
 * Ensure the API is integrated with a MySQL database containing tables for storing electrical machines parameters.
 
-4. Ubuntu OS Deployment:
+4. Ubuntu OS Deployment: - Done
+![alt text](image-1.png)
 
 * Deploy the Angular application on an Ubuntu server.
 * Ensure proper setup and configuration for smooth functioning of the application.
