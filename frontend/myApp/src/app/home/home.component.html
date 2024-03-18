@@ -1,0 +1,32 @@
+
+<h1>Electrical machines</h1>
+<p>In the context of electric machines, a clutch is a mechanical device used to engage or disengage
+     the transmission of power between the motor (or engine) and the driven load. It serves as
+      a coupling or decoupling mechanism, allowing the motor to run 
+      independently or to transfer its rotational power to 
+      the connected equipment or machinery.</p>
+<br>
+    <h2>In electric machines, clutches play a crucial role in various applications, such as:</h2>
+
+<p>Start-up and shutdown: Clutches allow for smooth and controlled engagement or disengagement of the motor from the driven load during start-up and shutdown sequences. This helps to prevent mechanical shocks, reduce wear and tear, and ensure safe operation.</p>
+<p>Overload protection: In case of overload conditions, clutches can disengage the motor from the driven load, preventing damage to the motor or the connected machinery. This feature acts as a safety mechanism, protecting the equipment from excessive torque or mechanical stress.</p>
+<p>Selective power transmission: In systems with multiple driven loads, clutches enable selective power transmission by engaging or disengaging specific components or sub-systems. This allows for efficient energy usage and operational flexibility.</p>
+<p>Synchronization: Clutches can be used to synchronize the speed of the motor with the driven load before engagement, ensuring smooth power transfer and minimizing mechanical stress.<br>
+    There are different types of clutches used in electric machines, including friction clutches, jaw clutches, and electromagnetic clutches. The choice of clutch depends on factors such as the required torque capacity, engagement/disengagement speed, and the specific application requirements.</p>
+
+<table>
+    <thead>
+      <tr>
+        <th>Item Service No.</th>
+        <th>Part No.</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.item_service_no }}</td>
+        <td>{{ product.part_no }}</td>
+        <td>{{ product.description }}</td>
+      </tr>
+    </tbody>
+  </table>
